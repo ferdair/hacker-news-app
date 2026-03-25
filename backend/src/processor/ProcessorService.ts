@@ -4,7 +4,8 @@ export type FilterType = 'more_than_5' | 'less_or_equal_to_5' | 'none';
 
 export class ProcessorService {
   public countWords(title: string): number {
-    const tokens = title.split(/\s+/);
+    const normalizedTitle = title.replace(/[\u00A0\u1680?\u180e\u2000-\u200a\u2028\u2029\u202f\u205f?\u3000\ufeff]/g, ' ');
+    const tokens = normalizedTitle.split(/\s+/);
     let count = 0;
     for (const token of tokens) {
       const cleanToken = token.replace(/[^a-zA-Z0-9]/g, '');
