@@ -1,0 +1,4 @@
+node_modules
+dist
+usage_logs.db
+.env

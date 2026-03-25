@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+dist
+.git
+backend/node_modules
+frontend/node_modules
+usage_logs.db
